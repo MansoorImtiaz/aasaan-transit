@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "174127201324",
+    "project_id": "aasaantransit-39662",
+    "storage_bucket": "aasaantransit-39662.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174127201324:android:3fed16b98a3070f5886589",
+        "android_client_info": {
+          "package_name": "com.example.aasaan_transit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSKRhXGSuFCE5cqw6tbhLtLtDfgYZPzgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
