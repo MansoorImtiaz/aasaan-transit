@@ -95,14 +95,44 @@ class _NearbyStopsScreenState extends State<NearbyStopsScreen> {
                               size: 32,
                             ),
                           ),
-                          // Stop markers
+                          // Stop markers with labels
                           ...state.stops.map(
                                 (stop) => Marker(
                               point: LatLng(stop.latitude, stop.longitude),
-                              child: Icon(
-                                Icons.location_on,
-                                color: AppTheme.primaryColor,
-                                size: 28,
+                              width: 120,
+                              height: 60,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 6,
+                                      vertical: 2,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: AppTheme.primaryColor,
+                                      borderRadius: BorderRadius.circular(6),
+                                    ),
+                                    child: Text(
+                                      stop.name,
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 9,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.location_on,
+                                    color: stop.stopType == 'metro'
+                                        ? Colors.purple
+                                        : stop.stopType == 'train'
+                                        ? Colors.orange
+                                        : AppTheme.primaryColor,
+                                    size: 28,
+                                  ),
+                                ],
                               ),
                             ),
                           ),

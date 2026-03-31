@@ -7,6 +7,11 @@ class NotificationService {
   FlutterLocalNotificationsPlugin();
 
   Future<void> initialize() async {
+
+    // Print token for testing
+    // final token = await getToken();
+    // print('FCM Token: $token');
+
     // Request permission
     await _firebaseMessaging.requestPermission(
       alert: true,
