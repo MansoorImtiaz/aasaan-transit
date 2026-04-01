@@ -8,17 +8,17 @@ abstract class NearbyStopsState extends Equatable {
   List<Object?> get props => [];
 }
 
-// Initial state — kuch nahi hua abhi
+// Initial state
 class NearbyStopsInitial extends NearbyStopsState {
   const NearbyStopsInitial();
 }
 
-// Loading — data aa raha hai
+// Loading
 class NearbyStopsLoading extends NearbyStopsState {
   const NearbyStopsLoading();
 }
 
-// Loaded — data aa gaya
+// Loaded
 class NearbyStopsLoaded extends NearbyStopsState {
   final List<StopModel> stops;
   final double userLat;
@@ -34,7 +34,7 @@ class NearbyStopsLoaded extends NearbyStopsState {
   List<Object?> get props => [stops, userLat, userLng];
 }
 
-// Error — kuch galat hua
+// Error
 class NearbyStopsError extends NearbyStopsState {
   final String message;
 

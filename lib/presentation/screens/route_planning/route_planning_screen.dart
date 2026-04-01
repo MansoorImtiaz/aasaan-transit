@@ -140,10 +140,13 @@ class _RoutePlanningScreenState extends State<RoutePlanningScreen> {
           Expanded(
             child: BlocBuilder<RoutePlanningBloc, RoutePlanningState>(
               builder: (context, state) {
+
+                // Loading state
                 if (state is RoutePlanningLoading) {
                   return const Center(child: CircularProgressIndicator());
                 }
 
+                // Failed state
                 if (state is RoutePlanningError) {
                   return Center(
                     child: Column(
@@ -163,6 +166,7 @@ class _RoutePlanningScreenState extends State<RoutePlanningScreen> {
                   );
                 }
 
+                // Data state
                 if (state is RoutePlanningLoaded) {
                   final route = state.route;
                   return Column(

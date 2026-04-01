@@ -8,10 +8,6 @@ class NotificationService {
 
   Future<void> initialize() async {
 
-    // Print token for testing
-    // final token = await getToken();
-    // print('FCM Token: $token');
-
     // Request permission
     await _firebaseMessaging.requestPermission(
       alert: true,
@@ -71,4 +67,8 @@ class NotificationService {
   Future<String?> getToken() async {
     return await _firebaseMessaging.getToken();
   }
+
+  // Print token for testing
+  // final token = await getToken();
+  // print('FCM Token: $token');
 }
